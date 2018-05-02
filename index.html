@@ -1,12 +1,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="シャニマス">
 <link rel="apple-touch-icon" href="https://shinycolors.enza.fun/assets/images/icon/icon_512.png">
 <script>
 if(navigator.standalone) {
-  location.href = "https://shinycolors.enza.fun"
+  document.write("端末を横にしてください")
+  function checkWindowSize() {
+    if (window.screen.width < window.screen.height) location.href = "https://shinycolors.enza.fun"
+  }
+  checkWindowSize()
+  window.addEventListener("resize", checkWindowSize)
 } else {
   document.write("共有メニューから、「ホーム画面に追加」をタップして追加してください")
 }
