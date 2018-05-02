@@ -6,12 +6,11 @@
 <link rel="apple-touch-icon" href="https://shinycolors.enza.fun/assets/images/icon/icon_512.png">
 <script>
 if(navigator.standalone) {
-  document.write("端末を横にしてください")
+  document.write("端末を横にして、アプリを再起動してください。")
   function checkWindowSize() {
     if (Math.abs(window.orientation) === 90) location.href = "https://shinycolors.enza.fun"
   }
   checkWindowSize()
-  window.addEventListener("resize", checkWindowSize)
 } else {
   document.write("共有メニューから、「ホーム画面に追加」をタップして追加してください")
 }
