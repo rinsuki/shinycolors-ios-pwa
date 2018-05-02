@@ -8,7 +8,7 @@
 if(navigator.standalone) {
   document.write("端末を横にしてください")
   function checkWindowSize() {
-    if (window.screen.width < window.screen.height) location.href = "https://shinycolors.enza.fun"
+    if (Math.abs(window.orientation) === 90) location.href = "https://shinycolors.enza.fun"
   }
   checkWindowSize()
   window.addEventListener("resize", checkWindowSize)
